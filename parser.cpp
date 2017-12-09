@@ -143,6 +143,12 @@ static double getMem() {
     static const uint32_t gExpectedMagic = 0x03b5d503;
 #endif
 
+#if defined INTERNETOFPEOPLE
+    static const size_t gHeaderSize = 80;
+    static auto kCoinDirName = ".unobtanium";
+    static const uint32_t gExpectedMagic = 0x03b5d503;
+#endif
+
 #define DO(x) x
     static inline void   startBlock(const uint8_t *p)                      { DO(gCallback->startBlock(p));         }
     static inline void     endBlock(const uint8_t *p)                      { DO(gCallback->endBlock(p));           }
