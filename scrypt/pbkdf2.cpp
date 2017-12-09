@@ -1,6 +1,6 @@
 // Copyright (c) 2013 NovaCoin Developers
 
-#if !defined(BITCOIN)
+#if !defined(BITCOIN) && !defined(INTERNETOFPEOPLE)
 
 #include <string.h>
 #include <stdint.h>
@@ -149,5 +149,5 @@ PBKDF2_SHA256(const uint8_t * passwd, size_t passwdlen, const uint8_t * salt,
     memset(&PShctx, 0, sizeof(HMAC_SHA256_CTX));
 }
 
-#endif // !defined(BITCOIN)
+#endif // !defined(BITCOIN) && !defined(INTERNETOFPEOPLE)
 

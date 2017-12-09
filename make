@@ -122,7 +122,7 @@ my($fortran) = "gfortran++";
 my(@inc) = qw(
     -I.
     -DNDEBUG
-    -DBITCOIN
+    -DINTERNETOFPEOPLE
     -DWANT_DENSE
     -D__STDC_FORMAT_MACROS=1
 );
@@ -139,6 +139,7 @@ my(@inc) = qw(
 #-DMYRIADCOIN
 #-DUNOBTANIUM
 #-DPROTOSHARES
+#-INTERNETOFPEOPLE
 
 
 # Libraries

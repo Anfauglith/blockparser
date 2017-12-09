@@ -145,8 +145,8 @@ static double getMem() {
 
 #if defined INTERNETOFPEOPLE
     static const size_t gHeaderSize = 80;
-    static auto kCoinDirName = ".unobtanium";
-    static const uint32_t gExpectedMagic = 0x03b5d503;
+    static auto kCoinDirName = ".iop";
+    static const uint32_t gExpectedMagic = 0xd3bbb0fd;
 #endif
 
 #define DO(x) x
