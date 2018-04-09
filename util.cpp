@@ -715,7 +715,10 @@ void hash160ToAddr(
     buf[ 2] = (size>> 8) & 0xff;
     buf[ 3] = (size>> 0) & 0xff;
     buf[ 4] = 0;
-    buf[ 5] = getCoinType() + type;
+    if ( type == 0 ) { buf[ 5] = getCoinType(); }
+    else if ( type == 5 ) { buf[ 5] = 174; }
+    else { assert(0==1); }
+    // buf[ 5] = getCoinType() + type;
     sha256Twice(
         4 + 2 + kRIPEMD160ByteSize + buf,
         4 + 1 + buf,
